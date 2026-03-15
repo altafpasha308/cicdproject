@@ -24,14 +24,14 @@ steps:
     args: 
       - 'build'
       - '-t'
-      - 'us-east1-docker.pkg.dev/openwriteup/cicd/myapp:$BUILD_ID'
+      - 'australia-southeast1-docker.pkg.dev/booming-landing-489605-j3/mydockerregistry:$BUILD_ID'
       - '.'
   # Step 4: Push Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: 
       - 'push'
-      - 'us-east1-docker.pkg.dev/openwriteup/cicd/myapp:$BUILD_ID'
+      - 'australia-southeast1-docker.pkg.dev/booming-landing-489605-j3/mydockerregistry:$BUILD_ID'
       
 images:
-  - 'us-east1-docker.pkg.dev/openwriteup/cicd/myapp:$BUILD_ID'
-logsBucket: "gs://amitow23comp"
+  - 'australia-southeast1-docker.pkg.dev/booming-landing-489605-j3/mydockerregistry:$BUILD_ID'
+logsBucket: "gs://cicdlogsbucket123"
